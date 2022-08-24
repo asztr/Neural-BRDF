@@ -13,31 +13,31 @@ Code repository for the paper:
 ## Content
 ```
 code/
-	binary_to_nbrdf/
-		binary_to_nbrdf.py: python script to encode one or more materials (in MERL binary format) as NBRDF neural networks.
-			- Usage: ./binary_to_nbrdf.py <material.binary> (optionally specify multiple materials)
-			- NBRDF is written as a keras .h5 network (<material>.h5, <material>.json). Sample pre-trained networks can be downloaded from the project webpage.
-			- Generated NBRDF networks are 6 x 21 x 21 x 3 (675 weights).
-			- Script can be directly used on any BRDF in binary format (materials can be downloaded from MERL or from Nielsen et al. 2015).
-			- Code has been tested with the following module versions:
-				-- keras 2.2.5
-				-- tensorflow-gpu 1.13.1
+  binary_to_nbrdf/
+    binary_to_nbrdf.py: python script to encode one or more materials (in MERL binary format) as NBRDF neural networks.
+      - Usage: ./binary_to_nbrdf.py <material.binary> (optionally specify multiple materials)
+      - NBRDF is written as a keras .h5 network (<material>.h5, <material>.json). Sample pre-trained networks can be downloaded from the project webpage.
+      - Generated NBRDF networks are 6 x 21 x 21 x 3 (675 weights).
+      - Script can be directly used on any BRDF in binary format (materials can be downloaded from MERL or from Nielsen et al. 2015).
+      - Code has been tested with the following module versions:
+      -- keras 2.2.5
+      -- tensorflow-gpu 1.13.1
 
-		h5_to_npy.py: python script to convert a .h5 NBRDF file from keras into a set of .npy files that can be read from Mitsuba.
-			- Usage: ./h5_to_npy.py <material.h5> (optionally specify multiple .h5 files)
-			- The script creates a folder "npy" in the location of <material.h5>, with 6 files representing the NBRDF weights.
+    h5_to_npy.py: python script to convert a .h5 NBRDF file from keras into a set of .npy files that can be read from Mitsuba.
+      - Usage: ./h5_to_npy.py <material.h5> (optionally specify multiple .h5 files)
+      - The script creates a folder "npy" in the location of <material.h5>, with 6 files representing the NBRDF weights.
 
-	mitsuba/
-		C++ codes required to render NBRDF materials in the Mitsuba renderer (https://www.mitsuba-renderer.org/index_old.html).
-		Installation:
-			- Copy all files from mitsuba/bsdfs into $MITSUBA/src/bsdfs/ ($MITSUBA=Mitsuba installation folder).
-			- Edit the file $MITSUBA/src/bsdfs/SConscript and add the following line:
-				plugins += env.SharedLibrary('nbrdf_npy', ['nbrdf_npy.cpp'])
-			- (Re)compile Mitsuba
-		Usage:
-			- sample_scene.xml is a Mitsuba scene ready to render using the material "blue-acrylic" in "data/merl_nbrdf/npy/".
-			- Simply run: mitsuba sample_scene.xml. This will generate an output rendering sample_scene.exr.
-			- To replace the material simply change the definition of the string "nn_basename", but remember to run h5_to_npy.py on the desired .h5 file first.
+  mitsuba/
+    C++ codes required to render NBRDF materials in the Mitsuba renderer (https://www.mitsuba-renderer.org/index_old.html).
+    Installation:
+      - Copy all files from mitsuba/bsdfs into $MITSUBA/src/bsdfs/ ($MITSUBA=Mitsuba installation folder).
+      - Edit the file $MITSUBA/src/bsdfs/SConscript and add the following line:
+        plugins += env.SharedLibrary('nbrdf_npy', ['nbrdf_npy.cpp'])
+      - (Re)compile Mitsuba
+    Usage:
+      - sample_scene.xml is a Mitsuba scene ready to render using the material "blue-acrylic" in "data/merl_nbrdf/npy/".
+      - Simply run: mitsuba sample_scene.xml. This will generate an output rendering sample_scene.exr.
+      - To replace the material simply change the definition of the string "nn_basename", but remember to run h5_to_npy.py on the desired .h5 file first.
 ```
 
 ## Usage Summary

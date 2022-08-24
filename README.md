@@ -10,7 +10,7 @@ Code repository for the paper:
 
 ### [Project Page](http://www0.cs.ucl.ac.uk/staff/A.Sztrajman/webpage/publications/nbrdf2021/nbrdf.html) | [Paper](https://reality.cs.ucl.ac.uk/projects/reflectance-remapping/sztrajman2021neural.pdf)
 
-## Content
+### Content
 ```
 code/
   binary_to_nbrdf/
@@ -40,7 +40,7 @@ code/
       - To replace the material simply change the definition of the string "nn_basename", but remember to run h5_to_npy.py on the desired .h5 file first.
 ```
 
-## Usage Summary
+### Usage Summary
 ```
 1) Follow installation instructions for mitsuba files
 2) In the project webpage there are pre-trained NBRDFs for materials from multiple databases. Run h5_to_npy.py on the desired NBRDF material (.h5 format).

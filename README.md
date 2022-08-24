@@ -1,12 +1,12 @@
 # Neural BRDF
-Code repository for the paper "Neural BRDF Representation and Importance Sampling" (CGF 2021)
+Code repository for the paper:
 
+<b>Neural BRDF Representation and Importance Sampling</b><br>
 [Alejandro Sztrajman](http://www0.cs.ucl.ac.uk/staff/A.Sztrajman/webpage/index.html),
 [Gilles Rainer](http://www0.cs.ucl.ac.uk/staff/G.Rainer/),
 [Tobias Ritschel](http://www.homepages.ucl.ac.uk/~ucactri/),
-[Tim Weyrich](https://reality.cs.ucl.ac.uk/weyrich.html)
-<br>
-University College London (UCL)
+[Tim Weyrich](https://reality.cs.ucl.ac.uk/weyrich.html)<br>
+<i>Computer Graphics Forum</i> (CGF), 40(6), pp. 332-346, 2021 (Oral Presentation at EGSR 2022).<br>
 
 ### [Project Page](http://www0.cs.ucl.ac.uk/staff/A.Sztrajman/webpage/publications/nbrdf2021/nbrdf.html) | [Paper](https://reality.cs.ucl.ac.uk/projects/reflectance-remapping/sztrajman2021neural.pdf)
 

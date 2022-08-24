@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<scene version="0.6.0">
+	<integrator type="direct">
+		<default name="hideEmitters" value="true"/>
+	</integrator>
+
+	<sensor type="perspective">
+		<float name="nearClip" value="0.1"/>
+		<float name="farClip" value="10.0"/>
+		<transform name="toWorld">
+			<lookAt origin="0, 0, -2" target="0, 0, 1" up="0, 1, 0"/>
+		</transform>
+		<float name="fov" value="30.0"/>
+
+		<sampler type="halton">
+			<integer name="sampleCount" value="256"/>
+			<integer name="scramble" value="1"/>
+		</sampler>
+
+		<film type="hdrfilm">
+			<integer name="width" value="512"/>
+			<integer name="height" value="512"/>
+ 			<rfilter type="gaussian"/>
+			<boolean name="banner" value="false"/>
+		</film>
+	</sensor>
+
+	<emitter type="envmap">
+		<string name="filename" value="envmap.exr"/>
+		<transform name="toWorld">
+			<rotate y="1" angle="140"/>
+		</transform>
+		<float name="scale" value="2"/>
+	</emitter>
+
+	<shape type="sphere">
+		<transform name="toWorld">
+			<scale value="0.5"/>
+			<translate x="0" y="0" z="0"/>
+		</transform>
+		<bsdf type="nbrdf_npy">
+			<string name="nn_basename" value="../../data/merl_nbrdf/npy/blue-acrylic_"/>
+		</bsdf>
+	</shape>
+
+</scene>

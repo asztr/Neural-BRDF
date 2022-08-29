@@ -2,13 +2,13 @@
 Code repository for the paper:
 
 <b>Neural BRDF Representation and Importance Sampling</b><br>
-[Alejandro Sztrajman](http://www0.cs.ucl.ac.uk/staff/A.Sztrajman/webpage/index.html),
+[Alejandro Sztrajman](https://asztr.github.io),
 [Gilles Rainer](http://www0.cs.ucl.ac.uk/staff/G.Rainer/),
 [Tobias Ritschel](http://www.homepages.ucl.ac.uk/~ucactri/),
 [Tim Weyrich](https://reality.cs.ucl.ac.uk/weyrich.html)<br>
 <i>Computer Graphics Forum</i> (CGF), 40(6), pp. 332-346, 2021 (Oral Presentation at EGSR 2022).<br>
 
-### [Project Page](http://www0.cs.ucl.ac.uk/staff/A.Sztrajman/webpage/publications/nbrdf2021/nbrdf.html) | [Paper](https://reality.cs.ucl.ac.uk/projects/reflectance-remapping/sztrajman2021neural.pdf)
+### [Project Page](https://asztr.github.io/publications/nbrdf2021/nbrdf.html) | [Paper](https://reality.cs.ucl.ac.uk/projects/reflectance-remapping/sztrajman2021neural.pdf)
 
 ### Content
 ```

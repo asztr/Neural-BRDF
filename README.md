@@ -10,6 +10,9 @@ Code repository for the paper:
 
 ### [Project Page](https://asztr.github.io/publications/nbrdf2021/nbrdf.html) | [Paper](https://reality.cs.ucl.ac.uk/projects/reflectance-remapping/sztrajman2021neural.pdf)
 
+
+![image23](https://user-images.githubusercontent.com/10238412/188183115-02a93eb8-a3ca-4dee-a49f-68fc8a0b13f1.png)
+
 ### Content
 ```
 code/

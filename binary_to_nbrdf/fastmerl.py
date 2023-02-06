@@ -8,7 +8,7 @@
 
 .. moduleauthor:: Alban Fichet <alban.fichet@inria.fr>
 
-.. modified by NBRDF PAPER AUTHOR
+.. modified by Alejandro Sztrajman <a.sztrajman@ucl.ac.uk>
 	- Implemented fast evaluation of multiple input angles in matrix form
 	- Added function to write MERL binary files
 	- Added multiple functions to interface with numpy arrays and pandas dataframes.
